@@ -1,0 +1,8 @@
+.DS_Store
+.claude/
+Podium.swiftpm/.claude/
+Podium.swiftpm/.swiftpm/
+.build/
+DerivedData/
+xcuserdata/
+backups/
