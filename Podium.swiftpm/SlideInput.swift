@@ -267,7 +267,9 @@ final class SlideInputCoordinator: NSObject, PKCanvasViewDelegate, UIGestureReco
                 .transformed(using: CGAffineTransform(translationX: config.inkOffset, y: 0)
                     .concatenating(CGAffineTransform(scaleX: scale, y: scale)))
             isLoadingDrawing = false
-            if keyChanged { canvas.undoManager?.removeAllActions() }
+            // Undo belongs to one page of one document. A new document (or a cleared page) can reuse the
+            // same key ("s0" is every deck's title slide), and undoing then would paste the old page's ink here.
+            if keyChanged || loadedRevision != config.inkRevision { canvas.undoManager?.removeAllActions() }
             loadedKey = config.inkKey
             loadedRevision = config.inkRevision
             loadedKeyRevision = config.keyRevision
