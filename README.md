@@ -2,7 +2,7 @@
 
 An iPad app for presenting and reading PDFs, made for LaTeX Beamer talks and papers. It has ink that matches your slides, better pointers, and a projector view that shows only the slide.
 
-![A Beamer slide annotated in Podium](screenshots/hero-beamer.png)
+![A Beamer lecture slide annotated in Podium, in Claude orange](screenshots/hero-beamer.png)
 
 Try it with the sample deck in `examples/job-search.pdf` (source: `job-search.tex`).
 
@@ -28,6 +28,8 @@ The pointer follows the Pencil when it touches the screen or hovers just above i
 - **Palettes:** the default "Podium" palette (black, grey, Penn red, Claude orange, ochre, forest green, Carolina blue, Penn blue, Northwestern purple), three more built-in palettes, and one generated from each deck's own theme colours. You can add custom colours with the system picker; its eyedropper samples anything on screen.
 - **Extras:** a whiteboard, note margins beside the page, and blank or photo pages inserted between slides.
 - **Export:** an annotated PDF with your ink.
+
+![The sample deck with pen ink, in landscape](screenshots/sample-deck-ink.png)
 
 ### Reading
 - **Scroll mode** with pinch zoom.
