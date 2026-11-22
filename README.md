@@ -2,7 +2,9 @@
 
 An iPad app for presenting and reading PDFs, made for LaTeX Beamer talks and papers. It has ink that matches your slides, better pointers, and a projector view that shows only the slide.
 
-![Markdown rendered like a LaTeX paper](screenshots/md-latex-look.png)
+![A Beamer slide annotated in Podium](screenshots/hero-beamer.png)
+
+Try it with the sample deck in `examples/job-search.pdf` (source: `job-search.tex`).
 
 ## Features
 
@@ -37,6 +39,8 @@ The pointer follows the Pencil when it touches the screen or hovers just above i
   - Math typeset by KaTeX (bundled, works offline).
   - Tables in booktabs style that break across pages.
 - Plain text and image files open too.
+
+![Markdown rendered like a LaTeX paper](screenshots/md-latex-look.png)
 
 ### Files
 - Link a folder (iCloud Drive, Dropbox, …) or add single files. Podium reads the originals, so a recompiled PDF shows up as soon as it syncs.

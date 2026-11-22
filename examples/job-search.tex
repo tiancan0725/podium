@@ -1,0 +1,44 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{pgfplots}\pgfplotsset{compat=1.18}
+\title{Job Search and the Reservation Wage}
+\subtitle{ECON 720 · Lecture 12}
+\date{}
+\begin{document}
+\maketitle
+\begin{frame}{The McCall model}
+\begin{itemize}
+\item Each period an unemployed worker draws an offer $w \sim F$ on $[0,\bar w]$.
+\pause
+\item Accept: earn $w$ forever. Reject: collect $c$ and search again.
+\pause
+\item Value of an offer:
+\[
+V(w) = \max\Big\{ \underbrace{\frac{w}{1-\beta}}_{\text{accept}},\;
+\underbrace{c + \beta \int_0^{\bar w} V(w')\,dF(w')}_{\text{reject}} \Big\}
+\]
+\end{itemize}
+\end{frame}
+\begin{frame}{The reservation wage}
+\begin{columns}
+\column{0.48\textwidth}
+\begin{tikzpicture}
+\begin{axis}[width=7.2cm,height=5.6cm,axis lines=left,xlabel={$w$},ylabel={$V(w)$},every axis x label/.style={at={(axis description cs:1,0)},anchor=north east},every axis y label/.style={at={(axis description cs:0,1)},anchor=south west},
+  xmin=0,xmax=10,ymin=0,ymax=110,xtick={4.2},xticklabels={$w^*$},ytick=\empty,
+  every axis plot/.append style={very thick}]
+\addplot[domain=0:10,color=gray,dashed] {x/0.1};
+\addplot[domain=0:4.2,color=mLightBrown] {42};
+\addplot[domain=4.2:10,color=mLightBrown] {x/0.1};
+\draw[dotted] (axis cs:4.2,0) -- (axis cs:4.2,42);
+\end{axis}
+\end{tikzpicture}
+\column{0.5\textwidth}
+Accept iff $w \ge w^*$, where
+\[
+w^* - c = \frac{\beta}{1-\beta}\int_{w^*}^{\bar w} (w'-w^*)\,dF(w').
+\]
+\pause
+\alert{Comparative statics:} a better outside option $c$ or more patience $\beta$ raises $w^*$; a mean-preserving spread in $F$ raises it too.
+\end{columns}
+\end{frame}
+\end{document}
