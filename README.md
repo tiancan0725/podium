@@ -29,7 +29,9 @@ The pointer follows the Pencil when it touches the screen or hovers just above i
 - **Extras:** a whiteboard, note margins beside the page, and blank or photo pages inserted between slides.
 - **Export:** an annotated PDF with your ink.
 
-![The sample deck with pen ink, in landscape](screenshots/sample-deck-ink.png)
+![The sample deck with pen ink, in dark mode](screenshots/sample-deck-ink.png)
+
+*Dark mode here; the slide at the top is in light mode. Settings also offer warm paper, sepia and dimmed page tints.*
 
 ### Reading
 - **Scroll mode** with pinch zoom.
